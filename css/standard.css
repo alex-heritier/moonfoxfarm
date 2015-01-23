@@ -13,9 +13,10 @@
 }
 
 body {
-	
+
 	/*background-color: #FFD586;*/
-    background-color: #FFFFFF;
+    background-color: #EEE;
+	color: #222;
 }
 
 /* 'stock' classes */
@@ -26,7 +27,7 @@ body {
   -ms-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
-  
+
   -webkit-opacity: 0.0;
   -moz-opacity: 0.0;
   opacity: 0.0;
@@ -38,7 +39,7 @@ body {
   -ms-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
-  
+
   -webkit-opacity: 1.0;
   -moz-opacity: 1.0;
   opacity: 1.0;

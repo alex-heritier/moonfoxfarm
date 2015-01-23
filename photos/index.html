@@ -8,39 +8,53 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <script type="text/javascript">
-			var image_base = "../resources/slideshow_images/";
-			var current_image_index = 1;
-			var active_img = 0;
-			var hidden_img = 0;
-			
+			var image_base = "../resources/slideshow_images/",
+		        current_image_index = 1,
+			    active_img = 0,
+    		    hidden_img = 0,
+                available = true;
+
 			function pad(n, width, z) {
 			  z = z || '0';
 			  n = n + '';
 			  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 			}
-			
+
 			function prev() {
-				console.log("prev");
-				if (current_image_index == 1) return;
-				current_image_index--;
+                if (available !== true) return;
+                console.log("prev " + available);
+                available = false;
+				if (current_image_index == 1) {
+                    current_image_index = 22;
+                } else {
+                    current_image_index--;
+                }
 				changeImage(image_base + pad(current_image_index, 3) + ".jpg");
 			}
-			
+
 			function next() {
-				console.log("next");
-				if (current_image_index >= 22) return;
-				current_image_index++;
+                if (available !== true) return;
+                console.log("next " + available);
+                available = false;
+				if (current_image_index >= 22) {
+                    current_image_index = 1;
+				} else {
+                    current_image_index++;
+                }
 				changeImage(image_base + pad(current_image_index, 3) + ".jpg");
 			}
-			
+
 			function changeImage(image_url) {
 				hidden_img.src = image_url;
 				active_img.className = "slideshow_img withfadeout";
 				hidden_img.className = "slideshow_img withfadein";
 				active_img = document.getElementsByClassName("slideshow_img withfadein")[0];
 				hidden_img = document.getElementsByClassName("slideshow_img withfadeout")[0];
+                setTimeout(function() {
+                    available = true;
+                }, 2000);   // 2000 because the animation takes 2s
 			}
-			
+
         	window.onload = function() {
 				active_img = document.getElementsByClassName("slideshow_img withfadein")[0];
 				hidden_img = document.getElementsByClassName("slideshow_img withfadeout")[0];
@@ -69,7 +83,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 			<!--
         	<img src="../resources/slideshow_images/001.jpg"/>
         	<img src="../resources/slideshow_images/002.jpg"/>
