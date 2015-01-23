@@ -1,0 +1,55 @@
+
+body {
+	/*background-image: url('/resources/backgrounds/csa.jpg');*/
+}
+
+.MAIN_header {
+	width: 800px;
+	height: 50px;
+	padding: 50px;
+}
+
+.MAIN_content {
+	width: 800px;
+	height: 1200px;
+}
+
+.images img {
+	width: 300px;
+	height: 225px;
+	margin-bottom: 5px;
+}
+
+.images {
+	width: 700px;
+	height: 250px;
+}
+
+.quote {
+	font-style: italic;
+	margin-left: 35%;
+}
+
+.quote_end {
+	font-style: italic;
+	margin-left: 40%;
+}
+
+.paypal {
+	width: 180px;
+}
+
+.paypal select {
+	margin-left: -70px;
+}
+
+.paypal img {
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.home_footer {
+	margin-top: 20px;
+}

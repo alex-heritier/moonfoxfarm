@@ -1,0 +1,66 @@
+/* general */
+
+@font-face {
+	font-family: Goetheanis;
+	src: url('/resources/fonts/baar_goetheanis.ttf');
+	/*src: url('/Users/Alex/Desktop/website/resources/fonts/baar_goetheanis.ttf');*/
+}
+
+* {
+    padding: 0;
+    margin: auto;
+    font-family: Goetheanis;
+}
+
+body {
+	
+	/*background-color: #FFD586;*/
+    background-color: #FFFFFF;
+}
+
+/* 'stock' classes */
+
+.withfadeout {
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  
+  -webkit-opacity: 0.0;
+  -moz-opacity: 0.0;
+  opacity: 0.0;
+}
+
+.withfadein {
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  
+  -webkit-opacity: 1.0;
+  -moz-opacity: 1.0;
+  opacity: 1.0;
+}
+
+img {
+	border-radius: 10px;
+}
+
+.home_footer {
+	width: 400px;
+	height: 100px;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/*
+.withfadeout:hover {
+  -webkit-opacity: 0.25;
+  -moz-opacity: 0.25;
+  opacity: 0.25;
+}
+*/

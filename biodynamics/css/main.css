@@ -1,0 +1,75 @@
+.MAIN_header {
+	width: 800px;
+	height: 50px;
+	padding: 50px;
+}
+
+.MAIN_content {
+	width: 800px;
+	height: 800px;
+}
+
+.image_box {
+	margin-top: 10px;
+	width: 800px;
+	height: 170px;
+}
+
+.left_image {
+	float: left;
+	width: 33%;
+}
+
+.img1 {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.left_image_label {
+	width: 33%;
+	float: left;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.middle_image {
+	float: left;
+	width: 34%;
+}
+
+.img2 {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.middle_image_label {
+	width: 33%;
+	float: left;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.right_image {
+	float: left;
+	width: 33%;
+}
+
+.img3 {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.right_image_label {
+	width: 33%;
+	float: left;
+	text-align: center;
+	margin-top: 0px;
+}
+
+.labels {
+	height: 50px;
+}
+
+.main_footer {
+	margin-top: -10px;
+}
