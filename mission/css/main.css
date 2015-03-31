@@ -6,7 +6,7 @@
 
 .MAIN_content {
 	width: 800px;
-	height: 800px;
+	height: 400px;
 }
 
 .image_box {
@@ -26,8 +26,4 @@
 
 input {
 	margin-right: 10px;
-}
-
-.home_footer {
-	margin-top: -100px;
 }

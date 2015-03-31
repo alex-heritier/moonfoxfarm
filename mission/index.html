@@ -1,0 +1,63 @@
+
+<!-- saved from url=(0036)http://moonfoxfarm.koding.com/about/ -->
+<html>
+	<head>
+        <title>About</title>
+        <link rel="stylesheet" type="text/css" href="/css/standard.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <script type="text/javascript">
+        	function verifyEmail(testEmail) {
+        		var email = document.getElementsByClassName(testEmail)[0].value;
+        		var patt=/\S+@\S+.\w+/;
+        		var result = patt.test(email);
+        		if (!result) {
+        			alert("Invalid email: please enter a valid email address");
+        		} else {
+        			addEmail(email);
+        		}
+        	}
+
+			function addEmail(email) {
+				var xmlhttp;
+				if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp = new XMLHttpRequest();
+				} else {// code for IE6, IE5
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						alert("Thank you for registering for Moon Fox Farm's mailing list!");
+					}
+				};
+				xmlhttp.open("GET","system/register_for_mailing_list.php?email=" + email, true);
+				xmlhttp.send();
+			}
+        </script>
+    </head>
+    <body>
+    	<div class="MAIN_header">
+        	<h1>Mission</h1>
+        </div>
+        <div class="MAIN_content">
+        	<p>Moon Fox Farm was named after the Silver Fox, creator god of many of the native peoples of the land now known as Northern California. In Miwok tribal traditions, Silver Fox is female. She creates the world and teaches the people how to live. In alchemy, silver is associated with the moon, and so Moon Fox Farm was created to connect back to the land, the spirits and learn how to live once again.</p>
+        	<br>
+        	<p>Located in rural West Petaluma under open skies between cow-spotted hills, Moon Fox Farm is in some of the purest farmland out there. Not only do we not use chemicals, neither do our neighbors. Instead we make compost, grow cover crops, and promote all kinds of biodiversity by growing a diverse crop selection of open pollinated heirlooms and not over working the land with heavy equipment.</p>
+        	<br>
+			<p>Farmer Annie Izaki has practiced and studied organic, permaculture, and biodynamic farming methods bringing as much to the table as it can handle. Moon Fox Farm aims to be an example of what is possible. Negative statistics reported on agriculture are all based on industrial models, but industrial agriculture is closer to war than food and people have come so far from nature they can’t tell the difference.</p>
+			<br>
+			<p>The difference can change your life and the life of this earth.</p>
+			<!-- mailing list
+			<div class="mailing_list">
+				<form action="http://moonfoxfarm.com/about/system/register_for_mailing_list.php" method="GET">
+					<input class="email_box" type="text" value="Your e-mail...">
+					<input type="button" value="Sign up!" onclick="verifyEmail('email_box')">
+				</form>
+			</div>
+			-->
+		</div>
+    	<div class="home_footer">
+			<a href="/">Home</a>
+		</div>
+</body>
+</html>
