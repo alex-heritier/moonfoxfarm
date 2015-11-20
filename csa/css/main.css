@@ -13,7 +13,8 @@ body {
 
 .MAIN_content {
 	width: 800px;
-	height: 1200px;
+	height: 0;
+	overflow: visible;
 }
 
 .images img {
@@ -43,6 +44,7 @@ p.bold {
 }
 
 .paypal {
+	margin-top: 10px;
 	width: 180px;
 }
 
